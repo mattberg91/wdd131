@@ -21,6 +21,7 @@ hr {
     height: 3px;
     background-color: #035f9c;
     width: 80%;
+    margin-top: 50px;
 }
 
 h1, h2, p {
@@ -35,6 +36,16 @@ img {
     margin: 0 auto;
 }
 
+#topics {
+    line-height: 1.5em;
+    margin: 0 auto;
+    width: 55%;
+
+}
+
+.list {
+    list-style-type: none;
+}
 
 
 
