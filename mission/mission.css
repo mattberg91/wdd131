@@ -2,13 +2,14 @@
 body {
     background-color: white;
     font-size: 20px;
+    font-family: "Times New Roman", serif;
 }
 
 #content {
-    max-width: 60%;
+    max-width: 800px;
     margin: 40px auto;
-    padding: 50px;
-
+    padding: 60px;
+    border: 1px solid #aaa;
 }
 
 h1 {
@@ -34,10 +35,12 @@ h2 {
 }
 
 
-#list {
+.list {
     line-height: 1.5em;
-    margin: 0 auto;
-    width: 55%;
+    margin: 0;
+    width: 80%;
+    list-style-type: decimal;
+    margin-bottom: 50px;
 
 }
 
