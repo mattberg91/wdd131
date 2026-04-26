@@ -11,9 +11,12 @@ body {
 
 }
 
+h1 {
+    font-size: 3.5em;
+}
+
 h1, h2, p {
     text-align: center;
-
 }
 
 
