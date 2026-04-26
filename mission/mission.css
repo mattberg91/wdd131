@@ -1,7 +1,7 @@
 
 body {
     background-color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Times New Roman", serif;
 }
 
@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.3em;
     text-align: center;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -21,11 +21,14 @@ h1 {
 
 }
 #statement {
-    max-width: 650px;
+    max-width: 500px;
     margin: 0 auto;
 }
 #school-name {
     color: #035f9c;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 40px auto;
     font-size: 1em;
     letter-spacing: 3px;
     text-align: center;
