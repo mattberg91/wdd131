@@ -1,6 +1,7 @@
 
 let selectElem = document.querySelector('select');
 let logo = document.querySelector('img');
+logo.className = "dark-logo";
 
 selectElem.addEventListener('change', changeTheme);
 
