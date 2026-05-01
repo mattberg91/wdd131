@@ -70,3 +70,25 @@ img {
     display: block;
     margin: 40px auto 0 auto;
 }
+
+.dark {
+    background-color: darkgrey;
+    color: white;
+
+}
+
+.dark-logo {
+    filter: brightness(0) invert(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
