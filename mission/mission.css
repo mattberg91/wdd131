@@ -77,7 +77,10 @@ img {
 
 }
 
-
+.dark img {
+    filter: none;
+    opacity: 1;
+}
 
 
 

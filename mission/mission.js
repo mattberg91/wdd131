@@ -10,12 +10,12 @@ function changeTheme() {
     if (current == 'dark') {
         // code for changes to colors and logo
         document.body.className = "dark";
-        logo.src = "byui-logo-dark.webp";
+        logo.src = "images/byui-logo-dark.webp";
         
     } else {
         // code for changes to colors and logo
         document.body.className = "light";
-        logo.src = "byui-logo-blue.webp";
+        logo.src = "images/byui-logo-blue.webp";
 
     }
 }           
