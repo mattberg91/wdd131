@@ -1,7 +1,7 @@
 
 let selectElem = document.querySelector('select');
 let logo = document.querySelector('img');
-logo.className = "dark-logo";
+
 
 selectElem.addEventListener('change', changeTheme);
 
@@ -10,7 +10,7 @@ function changeTheme() {
     if (current == 'dark') {
         // code for changes to colors and logo
         document.body.className = "dark";
-        logo.src = "byui-logo-white.webp";
+        logo.src = "byui-logo-dark.webp";
         
     } else {
         // code for changes to colors and logo
