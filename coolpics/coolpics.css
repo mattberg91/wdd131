@@ -43,7 +43,7 @@ nav a:hover {
     border: none;
     background-color: transparent;
 }
-.bar1, .bar2, .bar3 .bar4 .bar5{
+.bar1, .bar2, .bar3 .bar4 {
     width: 30px;
     height: 4px;
     background-color: black;
@@ -53,6 +53,24 @@ footer {
     text-align: center;
 }
 
+@media screen and (min-width: 500px) {
+    main {
+        grid-template-columns: 1fr; 
+    }
+
+    .menu-btn {
+        display: none;
+
+    }
+    nav a {
+    display: inline;
+    }
+    nav {
+        text-align: center;
+    }
+
+}
+  
 @media screen and (min-width: 700px) {
     main {
         grid-template-columns: 1fr 1fr; 
@@ -69,16 +87,19 @@ footer {
         text-align: center;
     }
 
-
-
-
 }
-          
+
+
+
+
 @media screen and (min-width: 1000px) {
     main {
         grid-template-columns: 1fr 1fr 1fr; 
     }
 
+    nav {
+        text-align: center;
+    }
 
 
 
