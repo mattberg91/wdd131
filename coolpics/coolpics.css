@@ -5,30 +5,35 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Roboto, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 header,
 main,
 footer {
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 1rem auto;
     border: 1px solid #ccc;
     padding: 1rem;
-    background-color: lightblue;
+    background-color: #437EDA;
     }
-    main {
+
+    .gallery {
         display: grid;
         grid-template-columns: 1fr;
+        gap: 15px;
     }
+
 h1 {
     text-align: center;
 }
 section {
   padding: 20px;
-  background-color: white;
+  background-color: lightgray;
   margin: 1em;
   border: 1px solid #ccc;
 }
+
+
 nav a {
     padding: 20px;
     color: black;
@@ -43,7 +48,7 @@ nav a:hover {
     border: none;
     background-color: transparent;
 }
-.bar1, .bar2, .bar3 .bar4 {
+.bar1, .bar2, .bar3, .bar4, .bar5 {
     width: 30px;
     height: 4px;
     background-color: black;
@@ -54,8 +59,8 @@ footer {
 }
 
 @media screen and (min-width: 500px) {
-    main {
-        grid-template-columns: 1fr; 
+    .gallery {
+        grid-template-columns: 1fr 1fr; 
     }
 
     .menu-btn {
@@ -72,8 +77,8 @@ footer {
 }
   
 @media screen and (min-width: 700px) {
-    main {
-        grid-template-columns: 1fr 1fr; 
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr; 
     }
 
     .menu-btn {
@@ -91,19 +96,6 @@ footer {
 
 
 
-
-@media screen and (min-width: 1000px) {
-    main {
-        grid-template-columns: 1fr 1fr 1fr; 
-    }
-
-    nav {
-        text-align: center;
-    }
-
-
-
-}
 
 
 
