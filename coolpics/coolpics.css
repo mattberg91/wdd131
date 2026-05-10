@@ -17,7 +17,6 @@ footer {
     background-color: #437EDA;
     color: white;
     }
-
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
