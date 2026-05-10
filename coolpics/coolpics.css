@@ -8,28 +8,36 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 header,
-main,
 footer {
     max-width: 100%;
     padding: 1rem;
     background-color: #437EDA;
+    color: white;
     }
 
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-        align-items: center;
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    justify-items: center;
+    justify-content: center;
     }
-
+.gallery img {
+    width: 250px;
+    height: auto;
+    border: 4px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 h1 {
     text-align: center;
     font-size: 3.5em;
 }
+main {
+    margin: 0 auto;
+    background-color: lightgray;
+}
 section {
     padding: 1em;
-    background-color: lightgray;
-    margin: 1em;
     border: 1px solid #ccc;
 }
 h2 {
@@ -48,7 +56,7 @@ h2 {
 }
 nav a {
     padding: 20px;
-    color: black;
+    color: white;
 
 }
 nav a:hover {
@@ -65,20 +73,16 @@ nav a:hover {
     background-color: transparent;
     font-size: 2em;
     font-weight: bold;
+    color: white;
 }
-/* .bar1, .bar2, .bar3 {
-    width: 30px;
-    height: 4px;
-    background-color: black;
-    margin: 5px 0;
-} */
+
 footer {
     text-align: center;
 }
 
 @media screen and (min-width: 830px) {
     .gallery {
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: repeat(2, auto); 
     }
 
     nav {
@@ -96,7 +100,7 @@ footer {
   
 @media screen and (min-width: 1190px) {
     .gallery {
-        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: repeat(3, auto); 
     }
 
     .menu-btn {
