@@ -24,10 +24,13 @@ footer {
     gap: 50px;
     justify-items: center;
     justify-content: center;
+    object-fit: cover;
+
     }
 .gallery img {
     width: auto;
     height: auto;
+    object-fit: cover;
     border: 4px solid white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
