@@ -38,7 +38,6 @@ nav a {
 }
 .hide {
     display: none;
-
 }
 nav a:hover {
     text-decoration: none;
@@ -57,7 +56,6 @@ nav a:hover {
     transition: 0.4s;
 }
 
-
 .change .bar1 {
   transform: translate(0, 9.0px) rotate(-45deg);
 }
@@ -75,7 +73,6 @@ footer {
     main {
         grid-template-columns: 1fr 1fr; 
     }
-
     .menu-btn {
         display: none;
 
@@ -86,18 +83,12 @@ footer {
     nav {
         text-align: right;
     }
-
-
-
-
 }
           
 @media screen and (min-width: 1000px) {
     main {
         grid-template-columns: 1fr 1fr 1fr; 
     }
-
-
 
 
 }
