@@ -73,7 +73,7 @@ footer {
         display: block;
     }
     nav a {
-        display: inline;
+        display: flex;
     }
     nav {
         text-align: right;
