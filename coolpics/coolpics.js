@@ -3,6 +3,8 @@ const gallery = document.querySelector('.gallery');
 const modal = document.querySelector('dialog');
 const modalImage = modal.querySelector('img');
 const closeButton = modal.querySelector('.close-viewer');
+const btn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.navigation');
 
 // Event listener for opening the modal
 gallery.addEventListener('click', openModal);
@@ -35,10 +37,13 @@ modal.addEventListener('click', (event) => {
     }
 });
  
+btn.addEventListener('click', toggleMenu);
 
-
-
-
+function toggleMenu() {
+    menu.classList.toggle('show');
+    btn.classList.toggle('change');
+    
+}
 
 
 
