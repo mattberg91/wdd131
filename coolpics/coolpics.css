@@ -57,6 +57,7 @@ h2 {
     font-size: 1.5em;
     font-weight: bold;
     align-items: center;
+
 }
 .navigation.show {
     display: flex;
@@ -64,7 +65,9 @@ h2 {
 nav a {
     padding: 20px;
     color: white;
-
+    display: block;
+    text-align: center;
+    text-decoration: none;
 }
 nav a:hover {
     text-decoration: none;
@@ -112,9 +115,9 @@ dialog {
     font-size: 1.5em;
 }
 
-
-
-
+.change .menu-btn {
+    background-color: transparent;
+}
 
 
 
@@ -131,12 +134,13 @@ footer {
         text-align: center;
     }
     nav a {
-        display: none;
+        display: block;
     }
-    .navigation {
+    .navigation.show {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+    }
+    .menu-btn {
+        display: flex;
     }
 }
   
@@ -147,7 +151,11 @@ footer {
 
     .menu-btn {
         display: none;
-
+    }
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
     nav a {
     display: inline;
