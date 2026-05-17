@@ -14,7 +14,6 @@ header,
 footer {
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem;
     background-color: #437EDA;
     color: white;
     }
@@ -97,31 +96,25 @@ figure img {
 }
 
 dialog img {
-    width: 80%;
-    max-width: 1000px;
-    max-height: 100vh;
+    width: 100%;
     display: block;
-    margin: 25vh auto;
-    object-fit: contain;
-
+    margin: 20vh auto;
 }
 dialog {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0,0,0,.75);
-    display: flex;
-
 }
 .viewer {
     position: relative;
-    width: fit-content;
-    max-width: 90vh;
-    margin: 10vh auto;
+    width: 90%;
+    max-width: 900px;
+    margin: 20vh auto;
 }
 .close-viewer {
     position: absolute;
-    top: 20vh;
-    right: 5vh;
+    top: -35px;
+    right: -35px;
     padding: 3px 6px;
     font-size: 1.5em;
 }
@@ -153,6 +146,12 @@ footer {
     .menu-btn {
         display: flex;
     }
+    .viewer {
+        position: relative;
+        width: 90%;
+        max-width: 800px;
+        margin: 20vh auto;
+    }
 }
   
 @media screen and (min-width: 1190px) {
@@ -169,12 +168,32 @@ footer {
         justify-content: center;
     }
     nav a {
-    display: inline;
+        display: inline;
     }
     nav {
         text-align: center;
     }
-
+    dialog img {
+        width: 100%;
+        display: block;
+        margin: 20vh auto;
+    }
+    dialog {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.75);
+    }
+    .close-viewer {
+        position: absolute;
+        padding: 3px 6px;
+        font-size: 1.5em;
+    }
+    .viewer {
+        position: relative;
+        width: 90%;
+        max-width: 950px;
+        margin: 20vh auto;
+    }
 }
 
 
