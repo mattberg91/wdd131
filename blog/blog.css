@@ -6,7 +6,8 @@ body {
     padding: 0;
     line-height: 1.6;
 }
-header, footer {
+header, main, footer {
+    max-width: 100%;
     background-color: white;
     color: black;
     padding: 1rem;
@@ -35,35 +36,38 @@ footer {
     border-left: none;
     border-right: none; 
 }
-.main-nav li {
-    padding: 8px;
-}
+
 .main-nav a {
-    color: red;
-    text-decoration: bold;
+    color: #b30059;
+    text-decoration: none;
 }
-#blog-list {
-    padding: 0 2rem;
-}
+
 .blog {
-    border-left: 2px solid orange;
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
+    border-left: none;
+    padding: 0;
     max-width: 700px;
-    margin: 20px auto;
+    margin: 40px auto;
+}
+.blog-info {
+    text-align: right;
+    border-right: 1px solid orange;
+    padding-right: 20px;
 }
 .blog h2 {
     color: #b30059;
     font-size: 1.5rem;
-    text-align: center;
-    margin: 10px;
+    text-align: left;
 }
 .blog p {
-    padding-left: 20px;
+    padding-left: 0;
 }
 .blog img {
-    max-width: 100%;
+    max-width: 200%;
     display: block;
-    border-radius: 8px;
+    border-radius: 0;
     margin: 0 auto;
 }
 #description {
