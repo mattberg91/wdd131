@@ -86,7 +86,10 @@ footer {
     padding-bottom: 0;
     padding-right: 20px;
 }
-
+.blog img {
+    max-width: 100%;
+    width: 200px;
+}
 
 
 
