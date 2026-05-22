@@ -74,7 +74,7 @@ footer {
     grid-column: 1/3;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
     .blog {
         display: grid;
         grid-template-columns: 180px 1fr;
