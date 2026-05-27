@@ -117,6 +117,7 @@ students.forEach(function(item){
     let html = `
     <span>${item.first}</span>
     <span>${item.last}</span>
+    <hr>
     `;
 
     name.innerHTML = html;
