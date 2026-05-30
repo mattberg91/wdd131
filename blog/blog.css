@@ -20,7 +20,7 @@ header, main, footer {
 }
 header h1 {
     text-align: center;
-    text-decoration: bold;
+    font-weight: bold;
 }
 footer {
     border-top: 1px solid orange;
@@ -44,7 +44,9 @@ footer {
 }
 
 .blog {
-    display: block;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
     max-width: 700px;
     margin: 40px auto;
 }
@@ -81,15 +83,15 @@ footer {
         gap: 30px;
     }
     .blog-info {
-    border-right: 1px solid orange;
-    border-bottom: none;
-    padding-bottom: 0;
-    padding-right: 20px;
+        border-right: 1px solid orange;
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-right: 20px;
 }
-.blog img {
-    max-width: 100%;
-    width: 200px;
-}
+    .blog img {
+        max-width: 100%;
+        width: 200px;
+    }
 
 
 
