@@ -35,7 +35,8 @@ footer {
     border-top: 1px solid orange;
     border-bottom: 1px solid orange;
     border-left: none;
-    border-right: none; 
+    border-right: none;
+    font-weight: bold; 
 }
 
 .main-nav a {
