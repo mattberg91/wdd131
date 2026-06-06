@@ -37,42 +37,33 @@ form.addEventListener("submit", function (event) {
   const firstName = form.firstName.value.trim();
   const lastName = form.lastName.value.trim();
   const email = form.email.value.trim();
-  const type = form.travelRange.value;
+  const ticket = form.ticketType.value;
   const availableDate = form.availableDate.value;
-  const selectedCampuses = getSelectedCampuses();
-  const note = form.notes.value.trim();
+  const student = form.studentId.value();
+  const guest = form.accessCode.value.trim();
 
-    // Validate the input
-  // Let the user know to select at least one campus
-if (selectedCampuses.length === 0) {
-    output.textContent = "Please select at least one campus.";
-    return;
-}
+  let extraInfo = "";
 
-  // Let the user know if they choose many campuses but didn't put a note that they need to add a note
-if (type === 'many' && !note) {
-    output.textContent = "Please ad a travel note.";
-    return;
-}
-  
-  //Let the user know if they choose many campus but only had one campus selected that they need to choose at least two campuses
- if (type === 'many' && selectedCampuses.length <2) {
-    output.textContent = "Please select at least two campuses.";
-    return;
- }
-
-  if (isPastDate(availableDate)) {
-    output.textContent = "Please choose a later date.";
-    return;
+  if (ticket === "student") {
+    return extraInfo = `<p>Student ID: ${student}</p>`;
+  } else {
+    return "";
   }
+  if (ticket === "guest") {
+    return extraInfo = `<p>Guest Access Code: ${guest}</p>`;
+
+  } else {
+    return "";
+  }
+
 
   output.innerHTML = `
   <h2>Preference Submitted</h2>
   <p>${firstName} ${lastName}</p>
   <p>Email: ${email}</p>
-  <p>Availability: ${availableDate}</p>
-  <p>Campuses: ${selectedCampuses.join(", ")}</p>
-  <p>Preference Level: ${type}</p>
+  <p>Ticket Type: ${ticket}</p>
+  <p>Date: ${availableDate}</p>
+    ${extraInfo}
   `;
 
   form.reset();
