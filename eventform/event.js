@@ -44,30 +44,32 @@ form.addEventListener("submit", function (event) {
 
   let extraInfo = "";
 
-  if (ticket === "student") {
-    return extraInfo = `<p>Student ID: ${student}</p>`;
-  } else if (ticket === "guest") {
-    return extraInfo = `<p>Guest Access Code: ${guest}</p>`;
-  }
-  if (ticket === "student" && !/^\d{9}$/.test(student)) {
+    if (ticket === "student" && !/^\d{9}$/.test(student)) {
     output.textContent = "Please enter a valid 9-digit student ID.";
     return;
   }
 
+  if (ticket === "student") {
+    output.extraInfo = `<p>Student ID: ${student}</p>`;
+  } else if (ticket === "guest") {
+    output.extraInfo = `<p>Guest Access Code: ${guest}</p>`;
+  }
+
+  console.log("Creating ticket output");
   output.innerHTML = `
   <h2>Ticket Submitted</h2>
   <p>${firstName} ${lastName}</p>
   <p>Email: ${email}</p>
   <p>Ticket Type: ${ticket}</p>
   <p>Date: ${availableDate}</p>
-    ${extraInfo}
+    ${output.extraInfo}
   `;
-
+  
   form.reset();
   studentBox.style.display = "none";
   guestBox.style.display = "none";
 });
-          
+        
 
 
 
