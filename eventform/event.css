@@ -75,9 +75,7 @@ button:hover {
 .campus-grid input {
   margin-right: 0.5rem;
 }
-#notesContainer[hidden] {
-  display: none;
-}
+
 
 #output {
   margin-top: 1rem;
