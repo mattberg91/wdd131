@@ -49,7 +49,10 @@ form.addEventListener("submit", function (event) {
   } else if (ticket === "guest") {
     return extraInfo = `<p>Guest Access Code: ${guest}</p>`;
   }
-
+  if (ticket === "student" && !/^\d{9}$/.test(student)) {
+    output.textContent = "Please enter a valid 9-digit student ID.";
+    return;
+  }
 
   output.innerHTML = `
   <h2>Ticket Submitted</h2>
