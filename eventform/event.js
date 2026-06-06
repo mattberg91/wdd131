@@ -1,10 +1,7 @@
 
 const form = document.querySelector("#fsyForm");
-const travelRange = document.querySelector("#travelRange");
-const notesContainer = document.querySelector("#notesContainer");
 const notes = document.querySelector("#notes");
 const output = document.querySelector("#output");
-const campusBoxes = document.querySelectorAll('input[name="campus"]');
 const ticketType= document.querySelector("#ticketType");
 const studentBox = document.querySelector("#studentBox");
 const guestBox = document.querySelector("#guestBox");
@@ -12,8 +9,8 @@ const guestBox = document.querySelector("#guestBox");
 
 
 ticketType.addEventListener("change", function() {
-    studentBox.computedStyleMap.display = "none";
-    gueestBox.style.display = "none";
+    studentBox.style.display = "none";
+    guestBox.style.display = "none";
 
     if (ticketType.value === "student") {
         studentBox.style.display = "block";
