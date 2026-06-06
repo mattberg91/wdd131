@@ -39,26 +39,20 @@ form.addEventListener("submit", function (event) {
   const email = form.email.value.trim();
   const ticket = form.ticketType.value;
   const availableDate = form.availableDate.value;
-  const student = form.studentId.value();
+  const student = form.studentId.value.trim();
   const guest = form.accessCode.value.trim();
 
   let extraInfo = "";
 
   if (ticket === "student") {
     return extraInfo = `<p>Student ID: ${student}</p>`;
-  } else {
-    return "";
-  }
-  if (ticket === "guest") {
+  } else if (ticket === "guest") {
     return extraInfo = `<p>Guest Access Code: ${guest}</p>`;
-
-  } else {
-    return "";
   }
 
 
   output.innerHTML = `
-  <h2>Preference Submitted</h2>
+  <h2>Ticket Submitted</h2>
   <p>${firstName} ${lastName}</p>
   <p>Email: ${email}</p>
   <p>Ticket Type: ${ticket}</p>
@@ -67,7 +61,8 @@ form.addEventListener("submit", function (event) {
   `;
 
   form.reset();
-  updateNotesField();
+  studentBox.style.display = "none";
+  guestBox.style.display = "none";
 });
           
 
