@@ -2,18 +2,18 @@
 const form = document.querySelector("#fsyForm");
 const notes = document.querySelector("#notes");
 const output = document.querySelector("#output");
+
 const ticketType= document.querySelector("#ticketType");
 const studentBox = document.querySelector("#studentBox");
 const guestBox = document.querySelector("#guestBox");
+const studentId = document.querySelector("#studentId");
+const accessCode = document.querySelector("#accessCode");
 
 
 
 ticketType.addEventListener("change", function() {
     studentBox.style.display = "none";
     guestBox.style.display = "none";
-
-    studentBox.style.display = false;
-    guestBox.style.display = false;
 
     if (ticketType.value === "student") {
         studentBox.style.display = "block";
@@ -22,35 +22,12 @@ ticketType.addEventListener("change", function() {
     }
 });
 
-function updateNotesField() {
-  const value = travelRange.value;
-
-  // Show the travel notes on the form if they are choosing many campuses and require it
-    if (value === 'many') {
-        notesContainer.hidden=false;
-        notes.required = true;
-    } else {
-        notesContainer.hidden = true;
-        notes.required = false;
-    }
-}
-
-travelRange.addEventListener("change", updateNotesField);
-updateNotesField();
-
 
 // Ensure they choose a date later than the current date
 function isPastDate(value) {
   const today = new Date();
   const chosen = new Date(value);
   return chosen < today;
-}
-
-function getSelectedCampuses() {
-  //.from converts a NodeList into a real array, so then you can use .filter and .map
-  return Array.from(campusBoxes)
-    .filter(box => box.checked)
-    .map(box => box.value); 
 }
 
 form.addEventListener("submit", function (event) {
