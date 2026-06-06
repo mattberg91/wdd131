@@ -41,6 +41,12 @@
           <option value="guest">Guest</option>
         </select>
       </div>
+      
+      <div class="field">
+        <label for="availableDate">Event Date</label>
+        <input id="availableDate" name="availableDate" type="date" required />
+      </div>
+
 
       <div id="studentBox" style="display: none;">
         <label for="studentId">Student ID Number:</label>
@@ -50,11 +56,6 @@
       <div id="guestBox" style="display: none;">
         <label for="accessCode">Guest Access Code:</label>
         <input type="text" id="accessCode" name="accessCode" />
-      </div>
-
-      <div class="field">
-        <label for="availableDate">Event Date</label>
-        <input id="availableDate" name="availableDate" type="date" required />
       </div>
 
       <button class="full" type="submit">Submit Preferences</button>
