@@ -16,9 +16,9 @@ ticketType.addEventListener("change", function() {
     guestBox.style.display = "none";
 
     if (ticketType.value === "student") {
-        studentBox.style.display = "block";
+        studentBox.style.display = "flex";
     } else if (ticketType.value === "guest") {
-        guestBox.style.display = "block";
+        guestBox.style.display = "flex";
     }
 });
 
