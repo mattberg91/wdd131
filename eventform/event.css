@@ -75,7 +75,10 @@ button:hover {
 .campus-grid input {
   margin-right: 0.5rem;
 }
-
+#studentBox,
+#guestBox {
+  display: none;
+}
 
 #output {
   margin-top: 1rem;
