@@ -11,7 +11,7 @@ const aCourse = {
     
     enrollStudent: function () {
             console.log('student enrolled');
-        }
+        },
             
             
   };
