@@ -1,7 +1,7 @@
 
 const characterCard = {
     name: 'character-card',
-    logo: 'snortleblat.png',
+    image: 'snortleblat.png',
     
     
     
@@ -13,18 +13,20 @@ const characterCard = {
         { statName: 'Health', statValue: 100 },
     ],
 
-    
+
 
 };
 
 
+console.log(characterCard.name);
+console.log(characterCard.image);
 
 
 
 
 
 
-document.querySelector('img').setAttribute('src', characterCard.logo);
+document.querySelector('img').setAttribute('src', characterCard.image);
 document.querySelector('img').setAttribute('alt', characterCard.name);
 
 
