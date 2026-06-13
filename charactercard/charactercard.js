@@ -1,43 +1,54 @@
 
 const characterCard = {
-    name: 'character-card',
+    name: 'Snortleblat',
+    class: 'Swamp Beast Diplomat',
+    level: 5,
+    health: 100,
     image: 'snortleblat.png',
     
     
-    
-    
-    
-    
-    stats: [
-        { statName: 'Level', statValue: 5 },
-        { statName: 'Health', statValue: 100 },
-    ],
+    attacked() {
+        this.health -= 20;
 
+        if (this.health <= 0) {
+            this.health = 0;
+            document.querySelector('#message').textContent =
+                `${this.name} has died!`;
+        }
+
+        updateCard();
+
+    },
+
+    levelUp() {
+        this.level++;
+        updateCard();
+    }
 
 
 };
 
 
-console.log(characterCard.name);
-console.log(characterCard.image);
+function updateCard() {
+    document.querySelector('#characterName').textContent = characterCard.name;
+    document.querySelector('#characterClass').textContent = characterCard.class;
+    document.querySelector('#characterLevel').textContent = characterCard.level;
+    document.querySelector('#characterHealth').textContent = characterCard.health;
+    document.querySelector('#characterimg').src = characterCard.image;
+
+}
 
 
+document.querySelector("#attackBtn").addEventListener("click", function () {
+    characterCard.attacked();
+});
 
 
+document.querySelector("#levelUpBtn").addEventListener("click", function () {
+    characterCard.levelUp();
+});
 
-
-document.querySelector('img').setAttribute('src', characterCard.image);
-document.querySelector('img').setAttribute('alt', characterCard.name);
-
-
-
-
-
-
-
-
-
-
+updateCard();
 
 
 
