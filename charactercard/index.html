@@ -8,15 +8,20 @@
     <script src="charactercard.js" defer></script>
 </head>
 <body>
-    <div id="characterCard">
-        <img id="characterimg" src="snortleblat.png" alt="snortleblat">
-        <h1 id="characterName"></h1>
-        <p><strong>Class:</strong> <span id="characterClass"></span></p>
-        <p><strong>Level:</strong> <span id="characterLevel"></span></p>
-        <p><strong>Health:</strong> <span id="characterHealth"></span></p>
-        
-        <button id="attackBtn">Attack Character</button>
-        <button id="levelUpBtn">Level Up</button>
+    <div class="card">
+        <img class="characterimg" src="snortleblat.png" alt="snortleblat">
+        <h1 class="characterName"></h1>
+            <div class="stats">
+                <p><strong>Class:</strong> <span id="characterClass"></span></p>
+                <p><strong>Level:</strong> <span id="characterLevel"></span></p>
+                <p><strong>Health:</strong> <span id="characterHealth"></span></p>
+
+            </div>
+
+        <div class="buttons">
+            <button id="attackBtn">Attack Character</button>
+            <button id="levelUpBtn">Level Up</button>
+        </div>
         <p id="message"></p>
 
     </div>
