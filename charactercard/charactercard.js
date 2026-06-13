@@ -38,6 +38,7 @@ function updateCard() {
 
 }
 
+renderCharacter();
 
 document.querySelector("#attackBtn").addEventListener("click", function () {
     characterCard.attacked();
