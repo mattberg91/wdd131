@@ -2,7 +2,7 @@
 const characterCard = {
     name: 'Snortleblat',
     class: 'Swamp Beast Diplomat',
-    level: 1,
+    level: 5,
     health: 100,
     image: 'snortleblat.png',
     
@@ -12,7 +12,8 @@ const characterCard = {
 
         if (this.health <= 0) {
             this.health = 0;
-            alert(`${this.name} has been defeated!`);
+            document.querySelector('#message').textContent =
+                `${this.name} has died!`;
         }
 
         updateCard();
@@ -40,6 +41,7 @@ function updateCard() {
 
 }
 
+renderCharacter();
 
 document.querySelector("#attackBtn").addEventListener("click", function () {
     characterCard.attacked();
