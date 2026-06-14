@@ -34,7 +34,8 @@ function updateCard() {
     document.querySelector('#characterClass').textContent = characterCard.class;
     document.querySelector('#characterLevel').textContent = characterCard.level;
     document.querySelector('#characterHealth').textContent = characterCard.health;
-    document.querySelector('#characterimg').src = characterCard.image;
+    document.querySelector('.characterimg').src = characterCard.image;
+    document.querySelector('.characterimg').alt = characterCard.name;
 
 }
 
