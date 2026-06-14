@@ -28,6 +28,8 @@ const characterCard = {
 
 };
 
+console.log(characterCard.name);
+console.log(characterCard.class)
 
 function updateCard() {
     document.querySelector('#characterName').textContent = characterCard.name;
