@@ -56,6 +56,7 @@ main {
 }
 .dessert-tag {
     display: inline-block;
+    background: lightgray;
     border: 1px solid #333;
     border-radius: 4px;
     padding: 6px;
