@@ -63,13 +63,13 @@ main {
 
 .recipe-card img {
     width: 100%;
-    height: 250px;
+    height: auto;
     object-fit: cover;
     border-radius: 6px;
 
 }
 
-.recipe-card h2 {
+.recipe-card h3 {
     color: #008cff
 }
 
@@ -122,7 +122,7 @@ footer {
 
     }
     .recipe-card img {
-        height: 250px;
+        height: auto;
         object-fit: cover;
     }
     footer {
