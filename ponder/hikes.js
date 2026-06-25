@@ -74,12 +74,13 @@ const hikes = [
 ];
                 
 
-let hikeContainer = document.querySelector('#hike-conatiner');
+let hikeContainer = document.querySelector('#hike-container');
 let input = document.querySelector('#search');
 let button = document.querySelector('button');
 
 let randomNum = Math.floor(Math.random() * hikes.length);
 console.log(randomNum);
+
 
 
 function tagTemplate(tags) {
@@ -126,9 +127,7 @@ function init() {
 }
 
 init();
-
-
-
+                
 
 
 
