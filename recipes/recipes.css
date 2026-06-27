@@ -59,7 +59,7 @@ main {
     width: 24px;
     height: 24px;
 }
-.dessert-tag {
+.tag {
     display: inline-block;
     background: lightgray;
     border: 1px solid #333;
