@@ -284,6 +284,8 @@ const recipes = [
 ]            
                     
 
+let recipeCard = document.querySelector('#recipe-card');
+let button = document.querySelector('button');
 
 
 
@@ -291,3 +293,32 @@ const recipes = [
 
 
 
+function recipesTemplate(recipe) {
+    return `<div class="recipe-card">
+  <div class="recipe-content">
+    <h2>${recipe.name}</h2>
+    <div class="hike-tags">
+      ${tagTemplate(recipe.tags)}
+    </div>
+    <p>${recipe.description}</p>
+    <p>${difficultyTemplate(recipe.rating)}</p>
+  </div>
+</div>`
+}
+
+let randomNum = Math.floor(Math.random() * recipes.length);
+console.log(randomNum);
+
+
+function renderRecipes(recipes) {
+    let html = recipesTemplate(recipes);
+    recipeCard.innerHTML += html
+}
+
+function init() {
+    renderRecipes(recipes[randomNum]);
+}
+
+
+
+init();
