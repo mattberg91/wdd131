@@ -323,19 +323,19 @@ function recipesTemplate(recipe) {
     `;
 }
 
-function getRanomRecipe() {
+function getRandomRecipe() {
     let randomNum = Math.floor(Math.random() * recipes.length);
-    return recipes(randomNum);
+    return recipes[randomNum];
 }
 
 
-function renderRecipes(recipes) {
+function renderRecipes(recipe) {
     recipeCard.innerHTML = recipesTemplate(recipe);
 }
 
 function init() {
-    let randomRecipe = getRanomRecipe();
-    renderRecipes(recipes[randomNum]);
+    let randomRecipe = getRandomRecipe();
+    renderRecipes(randomRecipe);
 }
 
 
