@@ -289,33 +289,52 @@ let button = document.querySelector('button');
 
 
 
+function tagTemplate(tags) {
+    return tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+}
 
+function ratingTemplate(rating) {
+    let html = `<span class="rating">`;
+
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        html += `<span aria-hidden="true" class="icon-boot"> ⭐ </span>`
+      } else {
+        html += `<span aria-hidden="true" class="icon-empty"> ☆ </span>`
+      }			
+    }
+    html += `</span>`
+    return html
+}    
 
 
 
 function recipesTemplate(recipe) {
-    return `<div class="recipe-card">
-  <div class="recipe-content">
-    <h2>${recipe.name}</h2>
-    <div class="hike-tags">
-      ${tagTemplate(recipe.tags)}
-    </div>
-    <p>${recipe.description}</p>
-    <p>${difficultyTemplate(recipe.rating)}</p>
-  </div>
-</div>`
+    return `
+        <img src="${recipe.image}" alt="${recipe.name}">
+        <div class="recipe-content">
+            <div class="recipe-tags">
+                ${tagTemplate(recipe.tags)}
+            </div>
+            <h2>${recipe.name}</h2>
+            <p>${recipe.description}</p>
+            <p>${ratingTemplate(recipe.rating)}</p>
+        </div>
+    `;
 }
 
-let randomNum = Math.floor(Math.random() * recipes.length);
-console.log(randomNum);
+function getRanomRecipe() {
+    let randomNum = Math.floor(Math.random() * recipes.length);
+    return recipes(randomNum);
+}
 
 
 function renderRecipes(recipes) {
-    let html = recipesTemplate(recipes);
-    recipeCard.innerHTML += html
+    recipeCard.innerHTML = recipesTemplate(recipe);
 }
 
 function init() {
+    let randomRecipe = getRanomRecipe();
     renderRecipes(recipes[randomNum]);
 }
 
