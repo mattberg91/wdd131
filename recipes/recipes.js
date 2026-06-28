@@ -285,9 +285,41 @@ const recipes = [
                     
 
 let recipeCard = document.querySelector('#recipe-card');
+let input = document.querySelector('#search')
 let button = document.querySelector('button');
 
+button.addEventListener('click', search);
 
+function search() {
+    let recipeQuery = document.querySelector('#search').value;
+
+    let filterRecipe = recipes.filter(function(recipe){
+        return (
+            recipe.name.toLowerCase().includes(recipeQuery.toLowerCase()) ||
+            recipe.description.toLowerCase().includes(recipeQuery.toLowerCase()) ||
+            recipe.tags.find(tag => tag.toLowerCase().includes(recipeQuery.toLowerCase()))
+        )
+    })
+
+    console.log(filterRecipes);
+
+    let sortedRecipes = filterRecipes.sort(compareRecipes)
+    
+    function compareRecipes(a,b) {
+    if (a.rating < b.rating) {
+        return -1;
+    } else if (a.rating > b.rating) {
+        return 1;
+    }
+    return 0;
+    }
+
+    recipeCard.innerHTML = '';
+    sortedRecipes.forEach(function(recipe) {
+        renderHike(recipe);
+
+    })
+}
 
 function tagTemplate(tags) {
     return tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
