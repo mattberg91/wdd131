@@ -290,7 +290,9 @@ let button = document.querySelector('button');
 
 button.addEventListener('click', search);
 
-function search() {
+function search(event) {
+    event.preventDefault();
+
     let recipeQuery = document.querySelector('#search').value;
 
     let filterRecipe = recipes.filter(function(recipe){
@@ -301,22 +303,24 @@ function search() {
         )
     })
 
-    console.log(filterRecipes);
+    console.log(filterRecipe);
 
-    let sortedRecipes = filterRecipes.sort(compareRecipes)
+    let sortedRecipes = filterRecipe.sort(compareRecipes)
     
-    function compareRecipes(a,b) {
-    if (a.rating < b.rating) {
-        return -1;
-    } else if (a.rating > b.rating) {
-        return 1;
-    }
-    return 0;
+    function compareRecipes(a, b) {
+        if (a.name < b.name) {
+            return -1;
+        } else if (a.name > b.name) {
+            return 1;
+        }
+        return 0;
+
     }
 
     recipeCard.innerHTML = '';
+
     sortedRecipes.forEach(function(recipe) {
-        renderHike(recipe);
+        renderRecipes(recipe);
 
     })
 }
@@ -362,10 +366,11 @@ function getRandomRecipe() {
 
 
 function renderRecipes(recipe) {
-    recipeCard.innerHTML = recipesTemplate(recipe);
+    recipeCard.innerHTML += recipesTemplate(recipe);
 }
 
 function init() {
+    recipeCard.innerHTML = "";
     let randomRecipe = getRandomRecipe();
     renderRecipes(randomRecipe);
 }
