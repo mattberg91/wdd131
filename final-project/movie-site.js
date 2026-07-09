@@ -67,7 +67,24 @@ button. addEventListener('click', search); {
             )
         })
     }
+    console.log(filteredMovies);
 
+    let sortedMovies = filteredMovies.sort(compareMovies)
 
+    function compareMovies(a, b) {
+        if (a.name < b.name) {
+            return -1;
+        }else if (a.name > b.name) {
+            return 1;
+        }
+        return 0;
+    }
+
+    movieCard.innerHTML = "";
+
+    sortedMovies.forEach(function(movies) {
+        renderMovieCard(movies);
+    })
+}
 
 
