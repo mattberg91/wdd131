@@ -88,3 +88,55 @@ button. addEventListener('click', search); {
 }
 
 
+
+
+function movieCard(movies) {
+    return `
+    <div class="movie-card">
+        <h3>${movies.name}</h3>
+        <p>${movies.description}</p>
+        <p>Rating: ${movies.rating}</p>
+    </div>
+    `;
+}
+
+function getRandomMovie() {
+    let randomNum = Math.floor(Math.random() * movieList.length);
+    return movieList[randomNum];
+}
+
+function renderMovie(movies) {
+    movieCard.innerHTML += movieCard(movies);
+}
+
+function init() {
+    movieCard.innerHTML = "";
+    let randomMovie = getRandomMovie();
+    renderMovie(randomMovie);
+}
+init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
