@@ -1,11 +1,37 @@
+:root {
+    --primary-color: #FBFCFF;
+    --secondary-color: #000100;
+    --accent1-color: #414288;
+    --accent2-color: #009FFD;
+    --heading-font: "Playfair Display", serif;
+    --paragraph-font: "Lato", "Inter", sans-serif;
+
+}
+body {
+    font-family: var(--paragraph-font);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em;
+    font-size: 18px;
+}
+
+header {
+    padding: 1em;
+    text-align: center;
+    color: var(--paragraph-color-on-color);
+    background-color: var(--paragraph-background-color);
+}
+
+
+header img {
+    width: 100px;
+}
 
 
 
 
 
-
-
-
-
-
-
+.search-bar button img {
+    width: 24px;
+    height: 24px;
+}
