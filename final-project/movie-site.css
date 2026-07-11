@@ -69,6 +69,36 @@ main {
     height: 24px;
 }
 
+.tag {
+    display: inline-block;
+    background: lightgray;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 6px;
+}
+.movie {
+    margin-bottom: 0;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.movie-info h2 {
+    font-family: "Amatic SC", cursive;
+    font-size: 2.5rem;
+    font-weight: 700; 
+}
+.movie-card h2 {
+    color: #008cff
+}
+.icon-empty,
+.icon-boot {
+    font-size: 1.5rem;
+}
+.movie-info {
+    display: block;
+
+}
 
 
 
