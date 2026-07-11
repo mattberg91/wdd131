@@ -7,6 +7,23 @@ const output = document.querySelector("#output");
 const ratingMovie = document.querySelector("#ratingMovie");
 const mvoieDescription = document.querySelector("#movieDescription");
 
+const movieList = [
+    {
+        name: "Frozen",
+        description: "A movie about a cursed princess who controls ics and goes on an adventure with her sister.",
+        rating: "PG",
+    },
+    {
+        name: "Tangled",
+        description: "A movie about a princess with magic hair that heals people who goes on an adventure to find out who she is.",
+        rating: "PG",
+    },
+    {
+        name: "My Hero Acadamia: Two Heroes",
+        description: "A movie about a young heroe and his mentor visiting an island made out of technology and their ensuing adventure.",
+        rating: "PG-13",
+    },
+]
 
 
 form.addEventListener("submit", function (event) {
@@ -30,23 +47,6 @@ form.addEventListener("submit", function (event) {
         `;
 });
 
-const movieList = [
-    {
-        name: "Frozen",
-        description: "A movie about a cursed princess who controls ics and goes on an adventure with her sister.",
-        rating: "PG",
-    },
-    {
-        name: "Tangled",
-        description: "A movie about a princess with magic hair that heals people who goes on an adventure to find out who she is.",
-        rating: "PG",
-    },
-    {
-        name: "My Hero Acadamia: Two Heroes",
-        description: "A movie about a young heroe and his mentor visiting an island made out of technology and their ensuing adventure.",
-        rating: "PG-13",
-    },
-]
 
 
 let  movieCard = document.querySelector("#movieCard");
@@ -72,6 +72,14 @@ button. addEventListener('click', search);
 
     let sortedMovies = filteredMovies.sort(compareMovies)
 
+
+
+    movieCard.innerHTML = "";
+
+    sortedMovies.forEach(function(movies) {
+        renderMovieCard(movies);
+    })
+
     function compareMovies(a, b) {
         if (a.name < b.name) {
             return -1;
@@ -80,14 +88,6 @@ button. addEventListener('click', search);
         }
         return 0;
     }
-
-    movieCard.innerHTML = "";
-
-    sortedMovies.forEach(function(movies) {
-        renderMovieCard(movies);
-    })
-
-
 function movieTemplate(movies) {
     return `
         <article class="movie-card">
@@ -98,7 +98,9 @@ function movieTemplate(movies) {
         `;
 }
 
-
+function renderMovie(movies) {
+    movieCard.innerHTML += movieTemplate(movies);
+}
 
 
 
@@ -107,14 +109,10 @@ function getRandomMovie() {
     return movieList[randomNum];
 }
 
-function renderMovie(movies) {
-    movieCard.innerHTML += movieCard(movies);
-}
-
 function init() {
     movieCard.innerHTML = "";
     let randomMovie = getRandomMovie();
-    renderMovie(randomMovie);
+    movieCard.innerHTML += movieTemplate(randomMovie);
 }
 init();
 
