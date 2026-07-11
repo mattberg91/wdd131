@@ -125,4 +125,31 @@ footer {
 
 
 
+@media screen and (min-width: 700px) {
+    .movie {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+
+    }
+    .movie img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer-link,
+    .social {
+        order: 0;
+    }
+
+
+} 
 
