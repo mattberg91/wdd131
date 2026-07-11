@@ -68,3 +68,61 @@ main {
     width: 24px;
     height: 24px;
 }
+
+
+
+
+
+
+
+
+footer {
+    width: 60%;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+.tag {
+    display: inline-block;
+    border: 1px solid grey;
+    padding: 4px;
+    margin-top: 0.5rem;
+
+}
+
+.social img {
+    width: 30px;
+    height: 30px
+}
+
+.social {
+    order: 2;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
