@@ -21,13 +21,13 @@ form.addEventListener("submit", function (event) {
 
 
 
-    consol.log("Creating movie output");
+    console.log("Creating movie output");
     output.innerHTML = `
-    <h2>Movie Submitted</h2>
-    <p>Movie Name: ${movieName}</p>
-    <p>Movie Description: ${movieDescription}</p>
-    <p>Movie Rating: ${movieRating}</p>
-    `;
+        <h2>Movie Submitted</h2>
+        <p>Movie Name: ${movieName}</p>
+        <p>Movie Description: ${movieDescription}</p>
+        <p>Movie Rating: ${movieRating}</p>
+        `;
 });
 
 const movieList = [
@@ -39,7 +39,7 @@ const movieList = [
     {
         name: "Tangled",
         description: "A movie about a princess with magic hair that heals people who goes on an adventure to find out who she is.",
-        rating: PG,
+        rating: "PG",
     },
     {
         name: "My Hero Acadamia: Two Heroes",
@@ -53,7 +53,7 @@ let  movieCard = document.querySelector("#movieCard");
 let input = document.querySelector('#search');
 let button = document.querySelector('button');
 
-button. addEventListener('click', search); {
+button. addEventListener('click', search);
     function search(event) {
         event.preventDefault();
 
@@ -66,8 +66,9 @@ button. addEventListener('click', search); {
                 movie.rating.toLowerCase().includes(searchterm.toLowerCase())
             )
         })
+        console.log(filteredMovies);
     }
-    console.log(filteredMovies);
+
 
     let sortedMovies = filteredMovies.sort(compareMovies)
 
@@ -85,20 +86,21 @@ button. addEventListener('click', search); {
     sortedMovies.forEach(function(movies) {
         renderMovieCard(movies);
     })
-}
 
 
-
-
-function movieCard(movies) {
+function movieTemplate(movies) {
     return `
-    <div class="movie-card">
-        <h3>${movies.name}</h3>
-        <p>${movies.description}</p>
-        <p>Rating: ${movies.rating}</p>
-    </div>
-    `;
+        <article class="movie-card">
+            <h3>${movies.name}</h3>
+            <p>${movies.description}</p>
+            <p>Rating: ${movies.rating}</p>
+        </article>
+        `;
 }
+
+
+
+
 
 function getRandomMovie() {
     let randomNum = Math.floor(Math.random() * movieList.length);
