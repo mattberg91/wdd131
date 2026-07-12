@@ -42,6 +42,8 @@ form.addEventListener("submit", function (event) {
     };
 
     movieList.push(newMovie);
+
+    saveMovies();
     
     console.log(movieList);
     output.innerHTML = `
