@@ -83,12 +83,14 @@ header img {
     display: grid;
     gap: 1.25rem;
 }
-.movie {
-    margin-bottom: 0;
-    border: 1px solid black;
-    border-radius: 6px;
-    padding: 1rem;
+.movie-entry {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 14px;
+    margin-top: 2rem;
+    border: 1px solid var(--secondary-color);
 }
+
 .movie-card {
     padding: 1rem;
     border: 1px solid var(--secondary-color);
