@@ -7,12 +7,22 @@
     --paragraph-font: "Lato", "Inter", sans-serif;
 
 }
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: var(--paragraph-font);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 4em;
     font-size: 18px;
+}
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
 }
 
 header {
@@ -20,10 +30,9 @@ header {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    color: var(--paragraph-color-on-color);
-    background-color: var(--paragraph-background-color);
 }
 header h1 {
+    color: var(--accent1-color);
     font-family: var(--heading-font);
     font-size: 4rem;
     font-weight: 700;
@@ -33,10 +42,6 @@ header img {
     width: 150px;
 }
 
-main {
-    width: 60%;
-    margin: 0 auto;
-}
 
 .search-bar {
     display: flex;
