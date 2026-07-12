@@ -37,7 +37,7 @@ form.addEventListener("submit", function (event) {
 
     const newMovie = {
         name: movieName,
-        descriiption: movieDescription,
+        description: movieDescription,
         rating: movieRating,
     };
 
@@ -59,7 +59,7 @@ form.addEventListener("submit", function (event) {
         form.reset();
 });
 
-searchForm.addEventListener("sumbit", search)
+searchForm.addEventListener("submit", search)
 
 function search(event) {
         event.preventDefault();
@@ -116,7 +116,9 @@ function loadMovies() {
 
 function renderMovie(movies) {
     movieCard.innerHTML = "";
-    movieCard.innerHTML += movieTemplate(movies);
+    movies.forEach(function(movie) {
+        movieCard.innerHTML += movieTemplate(movie);
+    });
 }
 
 
@@ -127,10 +129,14 @@ function getRandomMovie() {
 }
 
 function init() {
-    movieCard.innerHTML = "";
-    let randomMovie = getRandomMovie();
-    movieCard.innerHTML += movieTemplate(randomMovie);
+    loadMovies();
+        let randomMovie = getRandomMovie();
+        renderMovie([randomMovie]);
 }
+
+
+
+
 init();
 
 
