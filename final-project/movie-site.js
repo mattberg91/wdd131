@@ -54,7 +54,8 @@ form.addEventListener("submit", function (event) {
         `;
 
         movieList.sort(compareMovies);
-        renderMovies(movieList);
+
+        init();
 
         form.reset();
 });
@@ -96,6 +97,7 @@ function search(event) {
                 <h3>${movies.name}</h3>
                 <p>${movies.description}</p>
                 <p>Rating: ${movies.rating}</p>
+                <button class="edit-button" data-index="${index}">Edit Movie</button>
             </article>
             `;
 }
@@ -114,10 +116,10 @@ function loadMovies() {
 
 
 
-function renderMovie(movies) {
+function renderMovies(movies) {
     movieCard.innerHTML = "";
-    movies.forEach(function(movie) {
-        movieCard.innerHTML += movieTemplate(movie);
+    movies.forEach(function(movie, index) {
+        movieCard.innerHTML += movieTemplate(movie, index);
     });
 }
 
@@ -131,7 +133,7 @@ function getRandomMovie() {
 function init() {
     loadMovies();
         let randomMovie = getRandomMovie();
-        renderMovie([randomMovie]);
+        renderMovies([randomMovie]);
 }
 
 
