@@ -97,7 +97,6 @@ function search(event) {
                 <h3>${movies.name}</h3>
                 <p>${movies.description}</p>
                 <p>Rating: ${movies.rating}</p>
-                <button class="edit-button" data-index="${index}">Edit Movie</button>
             </article>
             `;
 }
@@ -118,8 +117,8 @@ function loadMovies() {
 
 function renderMovies(movies) {
     movieCard.innerHTML = "";
-    movies.forEach(function(movie, index) {
-        movieCard.innerHTML += movieTemplate(movie, index);
+    movies.forEach(function(movie) {
+        movieCard.innerHTML += movieTemplate(movie);
     });
 }
 
