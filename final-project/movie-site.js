@@ -44,7 +44,7 @@ form.addEventListener("submit", function (event) {
     };
 
     movieList.push(newMovie);
-
+    movieList.sort(compareMovies);
     saveMovies();
     
     console.log(movieList);
@@ -53,9 +53,14 @@ form.addEventListener("submit", function (event) {
         <p>Movie Name: ${movieName}</p>
         <p>Movie Description: ${movieDescription}</p>
         <p>Movie Rating: ${movieRating}</p>
+        ${
+            movieDate
+                ? `<p><strong>Date Added:</strong> ${movieDate}</p>`
+                : ""
+        }
         `;
 
-        movieList.sort(compareMovies);
+
 
         init();
 
