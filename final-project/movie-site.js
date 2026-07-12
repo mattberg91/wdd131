@@ -93,11 +93,11 @@ function search(event) {
         return 0;
 }
 
-    function movieTemplate(movies) {
+    function movieTemplate(movie) {
         return `
-            <article class="movie-card">
-                <h3>${movie.name}</h3>
-                <p>${movie.description}</p>
+            <article class="movieCard">
+                <h3><strong>Name: </strong>${movie.name}</h3>
+                <p><strong>Description: </strong>${movie.description}</p>
                 <p><strong>Rating:</strong> ${movie.rating}</p>
                 ${
                     movie.date
