@@ -61,11 +61,6 @@ form.addEventListener("submit", function (event) {
 
 searchForm.addEventListener("sumbit", search)
 
-let  movieCard = document.querySelector("#movieCard");
-let input = document.querySelector('#search');
-let button = document.querySelector('button');
-
-
 function search(event) {
         event.preventDefault();
 
