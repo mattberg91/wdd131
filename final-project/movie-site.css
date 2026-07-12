@@ -91,18 +91,14 @@ header img {
     border: 1px solid var(--secondary-color);
 }
 
-.movie-card {
-    padding: 1rem;
-    border: 1px solid var(--secondary-color);
-    border-radius: 8px;
-}
+
 .movieCard {
     padding: 1.25rem;
     background-color: var(--primary-color);
     border: 1px solid var(--accent1-color);
     border-radius: 8px;
 }
-.movieCard h2
+.movieCard h2,
 .movieCard h3 {
     color: var(--accent1-color);
     font-family: var(--heading-font)
