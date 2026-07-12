@@ -74,21 +74,15 @@ function search(event) {
                 movie.name.toLowerCase().includes(searchterm.toLowerCase()) ||
                 movie.description.toLowerCase().includes(searchterm.toLowerCase()) ||
                 movie.rating.toLowerCase().includes(searchterm.toLowerCase())
-            )
-        })
+            );
+        });
         console.log(filteredMovies);
+
+        let sortedMovies = filteredMovies.sort(compareMovies)
+
+
+        renderMovies(sortedMovies);
     }
-
-
-    let sortedMovies = filteredMovies.sort(compareMovies)
-
-
-
-    movieCard.innerHTML = "";
-
-    sortedMovies.forEach(function(movies) {
-        renderMovieCard(movies);
-    })
 
     function compareMovies(a, b) {
         if (a.name < b.name) {
@@ -97,18 +91,20 @@ function search(event) {
             return 1;
         }
         return 0;
-    }
-  function movieTemplate(movies) {
-    return `
-        <article class="movie-card">
-            <h3>${movies.name}</h3>
-            <p>${movies.description}</p>
-            <p>Rating: ${movies.rating}</p>
-        </article>
-        `;
+}
+
+    function movieTemplate(movies) {
+        return `
+            <article class="movie-card">
+                <h3>${movies.name}</h3>
+                <p>${movies.description}</p>
+                <p>Rating: ${movies.rating}</p>
+            </article>
+            `;
 }
 
 function renderMovie(movies) {
+    movieCard.innerHTML = "";
     movieCard.innerHTML += movieTemplate(movies);
 }
 
