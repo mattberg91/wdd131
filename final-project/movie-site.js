@@ -7,7 +7,7 @@ const movieCard = document.querySelector("#movieCard");
 const input = document.querySelector('#search');
 const searchForm = document.querySelector('.search-bar');
 
-const movieList = [
+let movieList = [
     {
         name: "Frozen",
         description: "A movie about a cursed princess who controls ics and goes on an adventure with her sister.",
@@ -102,6 +102,20 @@ function search(event) {
             </article>
             `;
 }
+
+function saveMovies() {
+    localStorage.setItem("movieList", JSON.stringify(movieList));
+}
+
+function loadMovies() {
+    let storedMovies = localStorage.getItem("movieList");
+
+    if (storedMovies !== null) {
+        movieList = JSON.parse(storedMovies);
+    }
+}
+
+
 
 function renderMovie(movies) {
     movieCard.innerHTML = "";
