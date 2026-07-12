@@ -10,7 +10,7 @@ const searchForm = document.querySelector('.search-bar');
 let movieList = [
     {
         name: "Frozen",
-        description: "A movie about a cursed princess who controls ics and goes on an adventure with her sister.",
+        description: "A movie about a cursed princess who controls ice and goes on an adventure with her sister.",
         rating: "PG",
     },
     {
@@ -19,8 +19,8 @@ let movieList = [
         rating: "PG",
     },
     {
-        name: "My Hero Acadamia: Two Heroes",
-        description: "A movie about a young heroe and his mentor visiting an island made out of technology and their ensuing adventure.",
+        name: "My Hero Academia: Two Heroes",
+        description: "A movie about a young heroS and his mentor visiting an island made out of technology and their ensuing adventure.",
         rating: "PG-13",
     },
 ]
@@ -34,11 +34,13 @@ form.addEventListener("submit", function (event) {
     const movieName = form.movieName.value.trim();
     const movieDescription = form.movieDescription.value.trim();
     const movieRating = form.ratingMovie.value;
+    const movieDate = form.dateMovieEntered.value;
 
     const newMovie = {
         name: movieName,
         description: movieDescription,
         rating: movieRating,
+        date: movieDate,
     };
 
     movieList.push(newMovie);
@@ -94,9 +96,14 @@ function search(event) {
     function movieTemplate(movies) {
         return `
             <article class="movie-card">
-                <h3>${movies.name}</h3>
-                <p>${movies.description}</p>
-                <p>Rating: ${movies.rating}</p>
+                <h3>${movie.name}</h3>
+                <p>${movie.description}</p>
+                <p><strong>Rating:</strong> ${movie.rating}</p>
+                ${
+                    movie.date
+                    ? `<p><strong>Date added:</strong> ${movie.date}</p>`
+                    : ""
+                }
             </article>
             `;
 }
