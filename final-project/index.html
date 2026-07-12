@@ -23,30 +23,30 @@
             <div class="movie-list" id="movieCard">
 
             </div>
+        <section class="movie-entry">
+            <h2>New Movie Entry</h2>
 
-        <h2>New Movie Entry</h2>
-
-        <form id="movieForm">
-            <div class="field">
-                <label for="movieName">Movie Title</label>
-                <input id="movieName" name="movieName" type="text" required />
-            </div>
-            <div class="field">
-                <label for="ratingMovie">Movie Rating</label>
-                <input id="ratingMovie" name="ratingMovie" type="text" required />
-            </div>
-            <div class="field">
-                <label for="movieDescription">Description of the Movie</label>
-                <input id="movieDescription" name="movieDescription" type="text" required />
-            </div>
-            <div class="field">
-                <label for="dateMovieEntered">Select the Movie Entry Date</label>
-                <input id="dateMovieEntered" name="dateMovieEntered" type="date" />
-            </div>
-            <button class="full" type="submit">Add Movie</button>
-        </form>
-        <div id="output"></div>
-
+            <form id="movieForm">
+                <div class="field">
+                    <label for="movieName">Movie Title</label>
+                    <input id="movieName" name="movieName" type="text" required />
+                </div>
+                <div class="field">
+                    <label for="ratingMovie">Movie Rating</label>
+                    <input id="ratingMovie" name="ratingMovie" type="text" required />
+                </div>
+                <div class="field description-field">
+                    <label for="movieDescription">Description of the Movie</label>
+                    <textarea id="movieDescription" name="movieDescription" rows="5" required></textarea>
+                </div>
+                <div class="field">
+                    <label for="dateMovieEntered">Select the Movie Entry Date</label>
+                    <input id="dateMovieEntered" name="dateMovieEntered" type="date" />
+                </div>
+                <button class="full" type="submit">Add Movie</button>
+            </form>
+            <div id="output"></div>
+        </section>
         
     </main>
     <footer>
