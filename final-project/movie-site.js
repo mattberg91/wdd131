@@ -1,11 +1,11 @@
 
 
 const form = document.querySelector("#movieForm");
-const notes = document.querySelector("#notes");
 const output = document.querySelector("#output");
 
-const ratingMovie = document.querySelector("#ratingMovie");
-const mvoieDescription = document.querySelector("#movieDescription");
+const movieCard = document.querySelector("#movieCard");
+const input = document.querySelector('#search');
+const searchForm = document.querySelector('.search-bar');
 
 const movieList = [
     {
@@ -28,15 +28,12 @@ const movieList = [
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
+
     output.textContent = "";
 
     const movieName = form.movieName.value.trim();
     const movieDescription = form.movieDescription.value.trim();
     const movieRating = form.ratingMovie.value;
-
-    
-
-
 
     console.log("Creating movie output");
     output.innerHTML = `
