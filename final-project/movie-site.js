@@ -35,23 +35,36 @@ form.addEventListener("submit", function (event) {
     const movieDescription = form.movieDescription.value.trim();
     const movieRating = form.ratingMovie.value;
 
-    console.log("Creating movie output");
+    const newMovie = {
+        name: movieName,
+        descriiption: movieDescription,
+        rating: movieRating,
+    };
+
+    movieList.push(newMovie);
+    
+    console.log(movieList);
     output.innerHTML = `
         <h2>Movie Submitted</h2>
         <p>Movie Name: ${movieName}</p>
         <p>Movie Description: ${movieDescription}</p>
         <p>Movie Rating: ${movieRating}</p>
         `;
+
+        movieList.sort(compareMovies);
+        renderMovies(movieList);
+
+        form.reset();
 });
 
-
+searchForm.addEventListener("sumbit", search)
 
 let  movieCard = document.querySelector("#movieCard");
 let input = document.querySelector('#search');
 let button = document.querySelector('button');
 
-button. addEventListener('click', search);
-    function search(event) {
+
+function search(event) {
         event.preventDefault();
 
         let searchterm = document.querySelector('#search').value;
@@ -85,7 +98,7 @@ button. addEventListener('click', search);
         }
         return 0;
     }
-function movieTemplate(movies) {
+  function movieTemplate(movies) {
     return `
         <article class="movie-card">
             <h3>${movies.name}</h3>
