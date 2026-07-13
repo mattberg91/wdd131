@@ -78,7 +78,7 @@ header img {
 
     cursor: pointer;
     border: 1px solid var(--secondary-color);
-    background-color: var(--accent2-color);
+    background-color: var(--accent1-color);
     border-radius: 0 6px 6px 0;
     border-left: none;
     padding: 0 1.25rem;
