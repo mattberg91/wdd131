@@ -50,14 +50,6 @@ header img {
     width: 100px;
 }
 
-.movie-form {
-    padding: 2rem;
-    margin-bottom: 2rem;
-    background-color: var(--primary-color);
-    border-radius: 14px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .search-bar {
     display: flex;
     width: 100%;
@@ -180,14 +172,6 @@ footer {
     gap: 10px;
     margin-top: 20px;
     border-top: 1px solid #ddd;
-}
-
-.tag {
-    display: inline-block;
-    border: 1px solid grey;
-    padding: 4px;
-    margin-top: 0.5rem;
-
 }
 
 .social img {
