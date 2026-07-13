@@ -22,7 +22,7 @@ let movieList = [
     },
     {
         name: "My Hero Academia: Two Heroes",
-        description: "A movie about a young heroS and his mentor visiting an island made out of technology and their ensuing adventure.",
+        description: "A movie about a young hero and his mentor visiting an island made out of technology and their ensuing adventure.",
         rating: "PG-13",
         date: "7/12/26"
     },
