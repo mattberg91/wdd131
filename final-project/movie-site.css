@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap");
 
 
@@ -12,9 +11,11 @@
     --paragraph-font: "Lato", "Inter", sans-serif;
 
 }
+
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: var(--paragraph-font);
     background-color: var(--accent1-color);
@@ -24,8 +25,9 @@ body {
     padding: 4em;
     font-size: 18px;
 }
+
 main {
-    width: 80%;
+    width: 50%;
     max-width: 1200px;
     margin: 2rem auto;
 }
@@ -36,16 +38,18 @@ header {
     justify-content: center;
     gap: 1rem;
 }
+
 header h1 {
     color: var(--accent2-color);
     font-family: var(--heading-font);
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 header img {
-    width: 150px;
+    width: 100px;
 }
+
 .movie-form {
     padding: 2rem;
     margin-bottom: 2rem;
@@ -61,6 +65,7 @@ header img {
     margin-bottom: 2rem;
     padding-bottom: 15px;
 }
+
 .search-bar input {
     flex: 1;
     padding: 12px;
@@ -88,6 +93,7 @@ header img {
     display: grid;
     gap: 1.25rem;
 }
+
 .movie-entry {
     background-color: var(--primary-color);
     padding: 2rem;
@@ -103,6 +109,7 @@ header img {
     border: 1px solid var(--accent1-color);
     border-radius: 8px;
 }
+
 .movieCard h2,
 .movieCard h3 {
     color: var(--accent1-color);
@@ -110,38 +117,44 @@ header img {
 }
 
 #movieForm {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
 .field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .full {
-  grid-column: 1 / 3;
+    grid-column: 1 / 3;
 }
 
 input,
 select,
-button {
-  padding: 0.6rem;
-  font: inherit;
+button,
+textarea {
+    padding: 0.6rem;
+    font: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 button {
-  padding: 0.7rem 1rem;
-  color: var(--primary-color);
-  background-color: var(--accent1-color);
-  border: none;
-  border-radius: 5px;
+    padding: 0.7rem 1rem;
+    color: var(--primary-color);
+    background-color: var(--accent1-color);
+    border: none;
+    border-radius: 5px;
 }
 
 button:hover {
-  background: var(--accent2-color);
+    background: var(--accent2-color);
 }
 
 
@@ -156,6 +169,7 @@ footer {
     margin-top: 20px;
     border-top: 1px solid #ddd;
 }
+
 .tag {
     display: inline-block;
     border: 1px solid grey;
@@ -180,20 +194,14 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 700px) {
+
+
+
+    main {
+        width: 80%;
+    }
+
     .movie {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -208,12 +216,11 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
-    
+
     .footer-link,
     .social {
         order: 0;
     }
 
 
-} 
-
+}
