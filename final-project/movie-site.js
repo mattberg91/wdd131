@@ -12,19 +12,19 @@ let movieList = [
         name: "Frozen",
         description: "A movie about a cursed princess who controls ice and goes on an adventure with her sister.",
         rating: "PG",
-        date: "7/12/2026"
+        date: "2026-07-12"
     },
     {
         name: "Tangled",
         description: "A movie about a princess with magic hair that heals people who goes on an adventure to find out who she is.",
         rating: "PG",
-        date: "7/12/2026"
+        date: "2026-07-12"
     },
     {
         name: "My Hero Academia: Two Heroes",
         description: "A movie about a young hero and his mentor visiting an island made out of technology and their ensuing adventure.",
         rating: "PG-13",
-        date: "7/12/26"
+        date: "2026-07-12"
     },
 ]
 
@@ -73,21 +73,21 @@ searchForm.addEventListener("submit", search)
 function search(event) {
     event.preventDefault();
 
-    let searchterm = document.querySelector('#search').value;
+    let searchTerm = input.value.trim().toLowerCase();
 
     let filteredMovies = movieList.filter(function (movie) {
         return (
-            movie.name.toLowerCase().includes(searchterm.toLowerCase()) ||
-            movie.description.toLowerCase().includes(searchterm.toLowerCase()) ||
-            movie.rating.toLowerCase().includes(searchterm.toLowerCase())
+            movie.name.toLowerCase().includes(searchTerm) ||
+            movie.description.toLowerCase().includes(searchTerm) ||
+            movie.rating.toLowerCase().includes(searchTerm)
         );
     });
 
-    let searchTerm = input.value.trim().toLowerCase();
-    let sortedMovies = filteredMovies.sort(compareMovies)
+
+    filteredMovies.sort(compareMovies)
 
 
-    renderMovies(sortedMovies);
+    renderMovies(filteredMovies);
 }
 
 function compareMovies(a, b) {
