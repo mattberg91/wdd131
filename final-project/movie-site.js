@@ -50,7 +50,6 @@ form.addEventListener("submit", function (event) {
     movieList.sort(compareMovies);
     saveMovies();
 
-    console.log(movieList);
     output.innerHTML = `
         <h2>Movie Submitted</h2>
         <p>Movie Name: ${movieName}</p>
@@ -83,8 +82,8 @@ function search(event) {
             movie.rating.toLowerCase().includes(searchterm.toLowerCase())
         );
     });
-    console.log(filteredMovies);
 
+    let searchTerm = input.value.trim().toLowerCase();
     let sortedMovies = filteredMovies.sort(compareMovies)
 
 
