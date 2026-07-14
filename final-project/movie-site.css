@@ -84,6 +84,13 @@ header img {
     min-height: 240px;
 }
 
+.no-results {
+    padding: 1.25rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    text-align: center;
+}
+
 .movie-entry {
     background-color: var(--primary-color);
     padding: 2rem;
@@ -91,7 +98,6 @@ header img {
     margin-top: 2rem;
     border: 1px solid var(--secondary-color);
 }
-
 
 .movieCard {
     padding: 1.25rem;

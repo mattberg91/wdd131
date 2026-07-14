@@ -90,11 +90,13 @@ function search(event) {
     renderMovies(filteredMovies);
 }
 
-function rencderMovies(movies) {
+function renderMovies(movies) {
     movieCard.innerHTML = "";
 
     if (movies.length === 0) {
-        movieCard.innerHTML = "<p>No Movies Found</p>";
+        movieCard.innerHTML = `<article class="movieCard">
+                                    <p>No Movies Found. Please add the movie or search for another.</p>
+                                </article>`;
     } else {
         movies.forEach(function (movie) {
             movieCard.innerHTML += movieTemplate(movie);
@@ -136,16 +138,6 @@ function loadMovies() {
         movieList = JSON.parse(storedMovies);
     }
 }
-
-
-
-function renderMovies(movies) {
-    movieCard.innerHTML = "";
-    movies.forEach(function (movie) {
-        movieCard.innerHTML += movieTemplate(movie);
-    });
-}
-
 
 
 function getRandomMovie() {
