@@ -100,66 +100,66 @@ function rencderMovies(movies) {
             movieCard.innerHTML += movieTemplate(movie);
         });
     }
+}
 
-
-    function compareMovies(a, b) {
-        if (a.name < b.name) {
-            return -1;
-        } else if (a.name > b.name) {
-            return 1;
-        }
-        return 0;
+function compareMovies(a, b) {
+    if (a.name < b.name) {
+        return -1;
+    } else if (a.name > b.name) {
+        return 1;
     }
+    return 0;
+}
 
-    function movieTemplate(movie) {
-        return `
+function movieTemplate(movie) {
+    return `
             <article class="movieCard">
                 <h3><strong>Name: </strong>${movie.name}</h3>
                 <p><strong>Description: </strong>${movie.description}</p>
                 <p><strong>Rating:</strong> ${movie.rating}</p>
                 ${movie.date
-                ? `<p><strong>Date added:</strong> ${movie.date}</p>`
-                : ""
-            }
+            ? `<p><strong>Date added:</strong> ${movie.date}</p>`
+            : ""
+        }
             </article>
             `;
+}
+
+function saveMovies() {
+    localStorage.setItem("movieList", JSON.stringify(movieList));
+}
+
+function loadMovies() {
+    let storedMovies = localStorage.getItem("movieList");
+
+    if (storedMovies !== null) {
+        movieList = JSON.parse(storedMovies);
     }
-
-    function saveMovies() {
-        localStorage.setItem("movieList", JSON.stringify(movieList));
-    }
-
-    function loadMovies() {
-        let storedMovies = localStorage.getItem("movieList");
-
-        if (storedMovies !== null) {
-            movieList = JSON.parse(storedMovies);
-        }
-    }
+}
 
 
 
-    function renderMovies(movies) {
-        movieCard.innerHTML = "";
-        movies.forEach(function (movie) {
-            movieCard.innerHTML += movieTemplate(movie);
-        });
-    }
+function renderMovies(movies) {
+    movieCard.innerHTML = "";
+    movies.forEach(function (movie) {
+        movieCard.innerHTML += movieTemplate(movie);
+    });
+}
 
 
 
-    function getRandomMovie() {
-        let randomNum = Math.floor(Math.random() * movieList.length);
-        return movieList[randomNum];
-    }
+function getRandomMovie() {
+    let randomNum = Math.floor(Math.random() * movieList.length);
+    return movieList[randomNum];
+}
 
-    function init() {
-        loadMovies();
-        let randomMovie = getRandomMovie();
-        renderMovies([randomMovie]);
-    }
+function init() {
+    loadMovies();
+    let randomMovie = getRandomMovie();
+    renderMovies([randomMovie]);
+}
 
 
-    init();
+init();
 
 
