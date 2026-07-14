@@ -55,8 +55,7 @@ header img {
 .search-bar {
     display: flex;
     width: 100%;
-    margin: 20px 0;
-    margin-bottom: 2rem;
+    margin: 20px 0 2rem;
     padding-bottom: 15px;
 }
 
@@ -179,6 +178,7 @@ footer {
 
 .social {
     display: flex;
+    gap: 0.25rem;
     padding-top: 0.5rem;
 }
 
@@ -201,10 +201,8 @@ footer {
 
     footer {
         width: 50%;
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
     }
 
 
