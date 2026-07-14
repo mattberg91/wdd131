@@ -179,9 +179,6 @@ footer {
 
 .social {
     display: flex;
-    text-decoration: none;
-    color: black;
-    font-size: 0.9rem;
     padding-top: 0.5rem;
 }
 
