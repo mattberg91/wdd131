@@ -107,7 +107,8 @@ function deleteMovie(event) {
     if (event.target.classList.contains("delete-button")) {
         let moivieIndex = Number(event.target.dataset.index);
 
-
+        movieList.splice(movieIndex, 1);
+        saveMovies();
 
         output.innerHTML = `
         <p>Movie deleted.</p>
