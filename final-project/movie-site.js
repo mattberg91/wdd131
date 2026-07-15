@@ -103,7 +103,18 @@ function renderMovies(movies) {
         });
     }
 }
+function deleteMovie(event) {
+    if (event.target.classList.contains("delete-button")) {
+        let moivieIndex = Number(event.target.dataset.index);
 
+
+
+        output.innerHTML = `
+        <p>Movie deleted.</p>
+    `;
+        init();
+    }
+}
 function compareMovies(a, b) {
     if (a.name < b.name) {
         return -1;
@@ -114,6 +125,8 @@ function compareMovies(a, b) {
 }
 
 function movieTemplate(movie) {
+    let movieIndex = movieList.indexOf(movie);
+
     return `
             <article class="movieCard">
                 <h3><strong>Name: </strong>${movie.name}</h3>
@@ -123,6 +136,8 @@ function movieTemplate(movie) {
             ? `<p><strong>Date added:</strong> ${movie.date}</p>`
             : ""
         }
+
+            <button type="button" class="delete-button" data-index="${movieIndex}">Delete Movie</button>
             </article>
             `;
 }
