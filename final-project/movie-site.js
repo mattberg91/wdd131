@@ -105,7 +105,7 @@ function renderMovies(movies) {
 }
 function deleteMovie(event) {
     if (event.target.classList.contains("delete-button")) {
-        let moivieIndex = Number(event.target.dataset.index);
+        let movieIndex = Number(event.target.dataset.index);
 
         movieList.splice(movieIndex, 1);
         saveMovies();
