@@ -69,7 +69,7 @@ form.addEventListener("submit", function (event) {
 });
 
 searchForm.addEventListener("submit", search)
-
+movieCard.addEventListener("click", deleteMovie);
 function search(event) {
     event.preventDefault();
 
